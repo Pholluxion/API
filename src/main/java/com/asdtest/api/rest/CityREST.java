@@ -53,7 +53,7 @@ public class CityREST {
 
 		try {
 
-			if (nameCity.isEmpty() || nameCity.isBlank()) {
+			if (nameCity.isEmpty()) {
 				return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Payload null");
 			} else {
 				Optional<List<City>> city = CityDAO.findByName(nameCity);
